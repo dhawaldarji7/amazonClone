@@ -2,7 +2,7 @@
 
 # Amazon Clone
 
-This repository contains the source code for an Amazon clone wb application built using React, React Router, Material UI, etc.
+This repository contains the source code for an Amazon clone web application built using React, React Router, Material UI, etc.
 
 Currently the project is in the initial stage of the frontend development.
 
