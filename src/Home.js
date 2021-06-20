@@ -21,7 +21,7 @@ function Home() {
         />
 
         <Product
-          id="1234"
+          id="1235"
           title="IPhone 12 Pro"
           price={999}
           rating={5}
@@ -31,7 +31,7 @@ function Home() {
 
       <div className="home__row">
         <Product
-          id="1234"
+          id="1236"
           title="IPhone 12 Pro"
           price={999}
           rating={5}
@@ -39,7 +39,7 @@ function Home() {
         />
 
         <Product
-          id="1234"
+          id="1237"
           title="IPhone 12 Pro"
           price={999}
           rating={5}
@@ -47,7 +47,7 @@ function Home() {
         />
 
         <Product
-          id="1234"
+          id="1238"
           title="IPhone 12 Pro"
           price={999}
           rating={5}
@@ -57,7 +57,7 @@ function Home() {
 
       <div className="home__row">
         <Product
-          id="1234"
+          id="1239"
           title="IPhone 12 Pro"
           price={999}
           rating={5}
