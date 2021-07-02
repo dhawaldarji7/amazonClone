@@ -4,11 +4,17 @@ import "./Header.css";
 import SearchIcon from "@material-ui/icons/Search";
 import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
 import { useStateValue } from "./StateProvider";
+import { auth } from "./firebase";
 
 function Header() {
-  const [{ basket }] = useStateValue();
+  const [{ basket, user }] = useStateValue();
 
-  console.log(basket);
+  const handleSignIn = () => {
+    if (user) {
+      auth.signOut();
+    }
+  };
+
   return (
     <nav className="header">
       <Link to="/">
@@ -24,11 +30,16 @@ function Header() {
       </div>
 
       <div className="header__nav">
-        {/*First */}
-        <Link to="/login" className="header__link">
+        <Link
+          to={!user && "/login"}
+          className="header__link"
+          onClick={handleSignIn}
+        >
           <div className="header__option">
             <span className="header__optionLineOne">Hello</span>
-            <span className="header__optionLineTwo">Sign In</span>
+            <span className="header__optionLineTwo">
+              {user ? "Sign Out" : "Sign In"}
+            </span>
           </div>
         </Link>
         <Link to="/" className="header__link">
@@ -52,7 +63,6 @@ function Header() {
           </div>
         </Link>
       </div>
-      {/*Cart */}
     </nav>
   );
 }
